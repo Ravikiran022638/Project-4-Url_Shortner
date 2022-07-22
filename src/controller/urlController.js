@@ -56,7 +56,7 @@ const getUrl = async function (req , res) {
             await SET_ASYNC(`${req.params.urlCode}`, JSON.stringify(findUrl))
              res.status(302).redirect(findUrl.longUrl );
         }   
-    } catch (error) {
+    } catch (error) {    
         return res.status(500).send({msg:error.msg})
         
     }}; 
